@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./fonts/YoungSerif-Thin.ttf') format('truetype'); /* Thin weight file */
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./fonts/YoungSerif-Regular.ttf') format('truetype'); /* Regular weight file */
+  font-weight: 400; /* Regular */
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./fonts/YoungSerif-Bold.ttf') format('truetype'); /* Bold weight file */
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+

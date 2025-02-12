@@ -1,0 +1,194 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 1 ;
+    gap : 10%;
+} 
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-text);
+    z-index: 1;
+    max-width: 50%; 
+}
+
+.greeting {
+    font-size: 1.2vw;
+    font-weight: 400;
+    font-family: var(--font-roboto);
+    margin-bottom: 33px;
+}
+
+.title {
+    font-size:  2.5Vw;
+    margin-bottom: 33px;
+    font-weight: 400;
+    font-family: 'lora', serif;    
+}
+.title b{
+    margin-bottom: 33px;
+    font-family: 'lora', serif;    
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.1vw;
+    font-weight: 400;
+    font-family: var(--font-roboto);
+    margin-bottom: 52px;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.socialIcons img {
+    width: 65px; /* Adjust size as needed */
+    height: 65px; /* Adjust size as needed */
+}
+
+.heroImgContainer {
+    position: relative;
+    top: -5vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.heroImg {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    z-index: 1;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.square2 {
+    position: absolute;
+    top: -30vh; /* Adjust as needed */
+    left: 0px; /* Adjust as needed to move to the right */
+    width: 70%;
+    height: auto;
+    z-index: 2;
+    animation: fadeIn 0.5s forwards, floating 3s infinite ease-in-out;
+    animation-delay: 0.5s; /* 0.5 second delay */
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+/* 
+.square2 {
+    width: 40%;
+    height: auto;
+    z-index: 3;
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+} */
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating2 {
+    0% {
+        transform: translateY(25px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(25px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .heroImgContainer {
+        position: static; /* Reset position */
+        top: 0; /* Reset top position */
+        width: 100%; /* Full width */
+        height: auto; /* Adjust height */
+        margin-top: 20px; /* Add margin to separate from text */
+    }
+
+    .heroImg {
+        position: relative; /* Reset position */
+        width: 50%; /* Adjust width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .description {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+
+    .socialIcons img {
+        width: 40px; /* Adjust size as needed */
+        height: 40px; /* Adjust size as needed */
+    }
+}
+
+.bottomBlur {
+    position: absolute;
+    width: 70vw;
+    height: 50vw;
+    min-width: 350px;
+    max-width: 250px;
+    top: 240px;
+    left: 10vw;
+    border: 764px;
+    background: rgba(66, 105, 129, 0.7);
+    filter: blur(100px);
+    z-index: -1; /* Ensure this is lower than the particles */
+}
+
+.topBlur {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    min-width: 900px;
+    max-width: 500px;
+    top: -128px;
+    right: 50vw;
+    border: 764px;
+    background: rgba(55, 78, 92, 0.7);
+    filter: blur(100px);
+    z-index: -1;
+}
+
